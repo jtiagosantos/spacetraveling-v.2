@@ -7,6 +7,7 @@ import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { getPrismicClient } from '../../services/prismic';
+import { Comments } from '../../components/Comments';
 
 import { calculateRedingTime } from '../../utils/calculateReadingTime';
 
@@ -99,6 +100,8 @@ export default function Post({ post }: PostProps) {
           </div>
         </section>
       </main>
+
+      <Comments />
     </div>
   );
 }
