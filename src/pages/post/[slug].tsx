@@ -15,6 +15,7 @@ import styles from './post.module.scss';
 
 interface Post {
   first_publication_date: string | null;
+  last_publication_date: string | null;
   data: {
     title: string;
     banner: {
@@ -37,6 +38,8 @@ interface PostProps {
 
 export default function Post({ post, preview = false }: PostProps) {
   const router = useRouter();
+
+  console.log(post);
 
   const formattedPost = {
     ...post,
@@ -88,6 +91,25 @@ export default function Post({ post, preview = false }: PostProps) {
               {formattedPost.time} min
             </p>
           </div>
+
+          {post.last_publication_date && (
+            <div className={styles.last_publication_date}>
+              <i>
+                * editado em{' '}
+                {format(
+                  new Date(post.first_publication_date),
+                  'dd MMM yyyy, ',
+                  {
+                    locale: ptBR,
+                  }
+                )}
+                às
+                {format(new Date(post.first_publication_date), ' k:m', {
+                  locale: ptBR,
+                })}
+              </i>
+            </div>
+          )}
 
           <div className={styles.post_text}>
             {formattedPost.data.content.heading.map((data, index) => (

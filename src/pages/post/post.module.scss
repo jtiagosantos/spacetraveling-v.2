@@ -37,7 +37,7 @@
       .info {
         display: flex;
         gap: 24px;
-        margin: 24px 0 64px;
+        margin-top: 24px;
 
         p {
           color: #BBBBBB;
@@ -49,9 +49,15 @@
         }
       }
 
+      .last_publication_date {
+        margin-top: 16px;
+        color: #BBBBBB;
+        font-size: 14px;
+      }
+
       .post_text {
         article {
-          margin-bottom: 50px;
+          margin: 64px 0 50px;
 
           &:last-child {
             margin-bottom: 0;
