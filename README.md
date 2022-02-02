@@ -84,6 +84,7 @@ The following tools were used in the construction of project:
 - **[Typescript](https://www.typescriptlang.org/)**
 - **[Sass](https://sass-lang.com/)**
 - **[Prismic](https://prismic.io/)**
+- **[Utterances](https://utteranc.es/)**
 - **[Fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch)**
 - **[Date-fns](https://date-fns.org/docs/Getting-Started)**
 - **[Jest](https://jestjs.io/)**
