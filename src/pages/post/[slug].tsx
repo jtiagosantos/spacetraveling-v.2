@@ -39,8 +39,6 @@ interface PostProps {
 export default function Post({ post, preview = false }: PostProps) {
   const router = useRouter();
 
-  console.log(post);
-
   const formattedPost = {
     ...post,
     time: calculateRedingTime(post.data.content),
@@ -123,6 +121,8 @@ export default function Post({ post, preview = false }: PostProps) {
           </div>
         </section>
       </main>
+
+      <hr className={styles.divider} />
 
       <Comments />
 
