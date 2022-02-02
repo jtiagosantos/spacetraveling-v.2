@@ -52,8 +52,8 @@
 1️⃣ Clone project and access its folder:
 
 ```bash
-$ git clone https://github.com/jtiagosantos/spacetraveling.git
-$ cd spacetraveling
+$ git clone https://github.com/jtiagosantos/spacetraveling-v.2.git
+$ cd spacetraveling-v.2
 ```
 
 2️⃣ Install dependencies:
@@ -66,7 +66,8 @@ $ yarn ou npm i
 
 ```bash
 #Prismic CMS
-PRISMIC_API_ENDPOINT=xxxxxxxxxxxxxxxxx
+PRISMIC_API_ENDPOINT=xxxxxxxxxxxxxxxxxxxxx
+PRISMIC_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxx
 ```
 
 4️⃣ Start project:
