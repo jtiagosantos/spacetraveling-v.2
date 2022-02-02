@@ -38,6 +38,7 @@ interface PostProps {
 
 export default function Post({ post, preview = false }: PostProps) {
   const router = useRouter();
+  const { query } = router;
 
   const formattedPost = {
     ...post,
@@ -123,6 +124,29 @@ export default function Post({ post, preview = false }: PostProps) {
       </main>
 
       <hr className={styles.divider} />
+
+      <section className={styles.actions}>
+        {query.previous_page ? (
+          <Link href="#">
+            <div>
+              <h3>Como utilizar hooks</h3>
+              <p>Post anterior</p>
+            </div>
+          </Link>
+        ) : (
+          <div />
+        )}
+        {query.next_page ? (
+          <Link href="#">
+            <div>
+              <h3>Criando um app CRA do Zero</h3>
+              <p>Próximo post</p>
+            </div>
+          </Link>
+        ) : (
+          <div />
+        )}
+      </section>
 
       <Comments />
 

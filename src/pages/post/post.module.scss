@@ -85,6 +85,49 @@
     margin: 0 auto;
     border: 1px solid #D7D7D7;
     opacity: 0.1;
+    margin-bottom: 48px;
+  }
+
+  .actions {
+    max-width: 721px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+
+    h3 {
+      color: #F8F8F8;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #FF57B2;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+      font-weight: 600;
+    }
+
+    div {
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+        cursor: pointer;
+      }
+
+      &:nth-child(2) {
+
+        p {
+          text-align: right;
+        }
+      }
+    }
   }
 
   aside {
