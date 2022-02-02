@@ -6,7 +6,9 @@ import PrismicDOM from 'prismic-dom';
 import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import { useEffect, useState } from 'react';
 import { getPrismicClient } from '../../services/prismic';
+import { usePostsContext } from '../../hooks/usePostsContext';
 import { Comments } from '../../components/Comments';
 
 import { calculateRedingTime } from '../../utils/calculateReadingTime';
@@ -36,9 +38,53 @@ interface PostProps {
   preview: boolean;
 }
 
+interface PostItem {
+  uid: string;
+  title: string;
+}
+
 export default function Post({ post, preview = false }: PostProps) {
+  const [nextPost, setNextPost] = useState({
+    uid: '',
+    title: '',
+  } as PostItem);
+  const [previousPost, setPreviousPost] = useState({
+    uid: '',
+    title: '',
+  } as PostItem);
+
   const router = useRouter();
   const { query } = router;
+
+  const { posts } = usePostsContext();
+
+  useEffect(() => {
+    posts.forEach((postItem, index) => {
+      if (postItem.uid === query.slug) {
+        if (index === 0) {
+          setNextPost({
+            uid: posts[index + 1].uid,
+            title: posts[index + 1].data.title,
+          });
+        } else if (index === posts.length - 1) {
+          setPreviousPost({
+            uid: posts[index - 1].uid,
+            title: posts[index - 1].data.title,
+          });
+        } else {
+          setPreviousPost({
+            uid: posts[index - 1].uid,
+            title: posts[index - 1].data.title,
+          });
+
+          setNextPost({
+            uid: posts[index + 1].uid,
+            title: posts[index + 1].data.title,
+          });
+        }
+      }
+    });
+  }, [posts, query.slug]);
 
   const formattedPost = {
     ...post,
@@ -126,20 +172,20 @@ export default function Post({ post, preview = false }: PostProps) {
       <hr className={styles.divider} />
 
       <section className={styles.actions}>
-        {query.previous_page ? (
-          <Link href="#">
+        {previousPost.uid ? (
+          <Link href={`/post/${previousPost.uid}`}>
             <div>
-              <h3>Como utilizar hooks</h3>
+              <h3>{previousPost.title}</h3>
               <p>Post anterior</p>
             </div>
           </Link>
         ) : (
           <div />
         )}
-        {query.next_page ? (
-          <Link href="#">
+        {nextPost.uid ? (
+          <Link href={`/post/${nextPost.uid}`}>
             <div>
-              <h3>Criando um app CRA do Zero</h3>
+              <h3>{nextPost.title}</h3>
               <p>Próximo post</p>
             </div>
           </Link>

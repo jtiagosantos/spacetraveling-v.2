@@ -114,6 +114,7 @@
     }
 
     div {
+      max-width: 260px;
       transition: filter 0.2s;
 
       &:hover {
@@ -123,7 +124,7 @@
 
       &:nth-child(2) {
 
-        p {
+        p, h3 {
           text-align: right;
         }
       }

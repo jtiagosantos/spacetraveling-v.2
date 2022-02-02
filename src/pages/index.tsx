@@ -11,6 +11,7 @@ import { getPrismicClient } from '../services/prismic';
 import Header from '../components/Header';
 
 import styles from './home.module.scss';
+import { usePostsContext } from '../hooks/usePostsContext';
 
 interface Post {
   uid?: string;
@@ -33,8 +34,11 @@ interface HomeProps {
 }
 
 export default function Home({ postsPagination, preview = false }: HomeProps) {
-  const [posts, setPosts] = useState(postsPagination.results);
   const [urlToNextPage, setUrlToNextPage] = useState(postsPagination.next_page);
+
+  const { posts, setPosts } = usePostsContext();
+
+  setPosts(postsPagination.results);
 
   async function handleLoadMorePosts() {
     const response = await fetch(urlToNextPage);

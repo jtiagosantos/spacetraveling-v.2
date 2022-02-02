@@ -6,7 +6,7 @@ export function Comments() {
     const anchor = document.getElementById('inject-comments-for-uterances');
     script.setAttribute('src', 'https://utteranc.es/client.js');
     script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('async', 'true');
+    script.setAttribute('async', true);
     script.setAttribute(
       'repo',
       'jtiagosantos/spacetraveling-comments-utterances'
