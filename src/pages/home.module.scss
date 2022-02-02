@@ -1,0 +1,65 @@
+.home_container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  button {
+    background: none;
+    border: none;
+
+    color: #FF57B2;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 64px;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(0.8);
+    }
+  }
+
+  .posts_container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    .post {
+      transition: filter 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
+      }
+
+      h1 {
+        color: #F8F8F8;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #D7D7D7;
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      .info {
+        display: flex;
+        gap: 24px;
+
+        p {
+          color: #BBBBBB;
+          font-size: 14px;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
