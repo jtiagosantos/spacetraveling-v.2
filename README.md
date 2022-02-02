@@ -1,19 +1,19 @@
-<h1 align="center">Spacetraveling</h1>
+<h1 align="center">Spacetraveling v.2</h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jtiagosantos/spacetraveling?color=%green">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jtiagosantos/spacetraveling?color=blue">
-  <a href="https://github.com/jtiagosantos/spacetraveling/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jtiagosantos/spacetraveling?color=purple">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jtiagosantos/spacetraveling-v.2?color=%green">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jtiagosantos/spacetraveling-v.2?color=blue">
+  <a href="https://github.com/jtiagosantos/spacetraveling-v.2/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jtiagosantos/spacetraveling-v.2?color=purple">
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=orange">
-   <a href="https://github.com/jtiagosantos/spacetraveling/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/jtiagosantos/spacetraveling?style=social">
+   <a href="https://github.com/jtiagosantos/spacetraveling-v.2/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/jtiagosantos/spacetraveling-v.2?style=social">
   </a>
 </p>
 
 <h4 align="center">
-	🚧  spacetraveling 🤖 Completed 🚀 🚧
+	🚧  spacetraveling v.2 🤖 Completed 🚀 🚧
 </h4>
 
 <p align="center">
@@ -41,6 +41,9 @@
 
 - [x] Read posts
 - [x] Load more posts
+- [x] Preview mode
+- [x] Pagination of posts
+- [x] Can add comments
 
 <hr>
 
@@ -92,12 +95,6 @@ The following tools were used in the construction of project:
 You can view the project layout through the link below:
 
 - **[Layout Web](https://www.figma.com/file/kd3TTvyo87gkxmlYfbMN3e/Desafios-M%C3%B3dulo-3-ReactJS-(Copy)?node-id=0%3A1)**
-
-<hr>
-
-## :cloud: Deploy
-
-- **[Spacetraveling](https://spacetraveling-gilt.vercel.app/)**
 
 <hr>
 
