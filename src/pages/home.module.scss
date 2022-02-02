@@ -62,4 +62,26 @@
       }
     }
   }
+
+  aside {
+    height: 58px;
+    background: #F8F8F8;
+    border-radius: 4px;
+    margin-top: 90px;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    a {
+      display: block;
+      line-height: 58px;
+      text-align: center;
+      text-decoration: none;
+      color: #1A1D23;
+      font-size: 18px;
+    }
+  }
 }
